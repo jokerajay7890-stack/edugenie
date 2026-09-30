@@ -21,10 +21,11 @@ app = FastAPI(
     description="AI-powered learning assistant"
 )
 (BASE_DIR / "static").mkdir(parents=True, exist_ok=True)
-app.mount(
-    "/static",(BASE_DIR / "static").mkdir(parents=True, exist_ok=True)
 
-    name="static"
+app.mount(
+    "/static",
+    StaticFiles(directory=BASE_DIR / "static"),
+    name="static",
 )
 
 templates = Jinja2Templates(
