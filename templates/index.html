@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="/static/favicon.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/static/css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- HEADER -->
+
+        <header class="hero">
+
+            <div class="logo">
+                EG
+            </div>
+
+            <div>
+
+                <p class="eyebrow">
+                    AI LEARNING ASSISTANT
+                </p>
+
+                <h1>
+                    EduGenie
+                </h1>
+
+                <p class="subtitle">
+                    Learn smarter. Practice better.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- MAIN CARD -->
+
+        <section class="card">
+
+            <div class="form-group">
+
+                <label for="task">
+                    Choose a task
+                </label>
+
+                <select id="task">
+
+                    <option value="qa">
+                        Ask a Question
+                    </option>
+
+                    <option value="explain">
+                        Explain a Concept
+                    </option>
+
+                    <option value="quiz">
+                        Generate Quiz
+                    </option>
+
+                    <option value="summarize">
+                        Summarize
+                    </option>
+
+                    <option value="learn">
+                        Learning Path
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="extraFields"></div>
+
+
+            <div class="form-group">
+
+                <label
+                    id="inputLabel"
+                    for="inputText"
+                >
+                    Your question
+                </label>
+
+                <textarea
+                    id="inputText"
+                    placeholder="Example: What is RAM?"
+                ></textarea>
+
+            </div>
+
+
+            <button
+                id="submitBtn"
+                class="primary-btn"
+            >
+                Ask EduGenie
+            </button>
+
+
+            <p
+                id="status"
+                class="status"
+            ></p>
+
+        </section>
+
+
+        <!-- RESULT -->
+
+        <section
+            id="resultCard"
+            class="card result-card hidden"
+        >
+
+            <div class="result-header">
+
+                <h2>
+                    Result
+                </h2>
+
+                <button
+                    id="copyBtn"
+                    class="secondary-btn"
+                >
+                    Copy
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+        </section>
+
+
+        <footer>
+            EduGenie • FastAPI + Google Gemini
+        </footer>
+
+    </main>
+
+
+    <script src="/static/css/js/app.js"></script>
+
+</body>
+
+</html>
