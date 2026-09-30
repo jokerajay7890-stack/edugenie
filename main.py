@@ -23,7 +23,7 @@ app = FastAPI(
 
 app.mount(
     "/static",(BASE_DIR / "static").mkdir(parents=True, exist_ok=True)
-    StaticFiles(directory=BASE_DIR / "static"),
+
     name="static"
 )
 
