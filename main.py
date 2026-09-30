@@ -20,7 +20,7 @@ app = FastAPI(
     version="1.0.0",
     description="AI-powered learning assistant"
 )
-
+(BASE_DIR / "static").mkdir(parents=True, exist_ok=True)
 app.mount(
     "/static",(BASE_DIR / "static").mkdir(parents=True, exist_ok=True)
 
